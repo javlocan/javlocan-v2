@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  gap: 3rem;
+  height: 100vh;
+  height: 100dvh;
+  padding-bottom: 5rem;
+
+  color: white;
+  background: var(--color-primary-dark);
+}
+
+.javier {
+  margin-left: 9rem;
+  animation: javier 2s ease-in-out;
+}
+.lopez {
+  margin-left: 10rem;
+  animation: lopez 2s ease-in-out;
+}
+.cantero {
+  margin-left: 9rem;
+  animation: cantero 2s ease-in-out;
+}
+
+.name text {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  animation: opacity 2s ease-in-out;
+}
+.name:hover text {
+  opacity: 0.3;
+}
+.name h1 {
+  transition: margin 0.3s ease-in-out;
+}
+.name:hover h1 {
+  margin: 0;
+}
+
+@keyframes javier {
+  from {
+    margin-left: 9rem;
+  }
+  70% {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: 9rem;
+  }
+}
+@keyframes lopez {
+  from {
+    margin-left: 10rem;
+  }
+  70% {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: 10rem;
+  }
+}
+@keyframes cantero {
+  from {
+    margin-left: 9rem;
+  }
+  70% {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: 9rem;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blockhover {
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}
