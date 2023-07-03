@@ -19,17 +19,30 @@
   padding: 0;
   margin: 0;
 }
-
+html {
+  background: var(--color-primary-dark);
+  overflow-x: hidden;
+}
 html,
 body {
+  scroll-behavior: smooth;
+
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+header {
+  overflow: auto;
+}
+
+footer {
+  height: 400vh;
 }
 
 body {
   max-height: 100vh;
   max-height: 100dvh;
-  background: white;
+  background: antiquewhite;
   position: relative;
 }
 

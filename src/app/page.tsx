@@ -6,11 +6,9 @@ import { NavBar } from "@/components/NavBar";
 export default function Home() {
   return (
     <>
-      <header>
-        <NavBar />
-      </header>
+      <NavBar />
       <main className={styles.main}>
-        <h2>Home</h2>
+        <h2>About me</h2>
         <p>This is the home page</p>
       </main>
       <footer>
