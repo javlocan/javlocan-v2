@@ -6,7 +6,7 @@
   place-items: center;
   cursor: default;
   width: 100%;
-  padding-bottom: 6rem;
+  padding-bottom: 8rem;
   height: calc(100vh - 3rem);
   height: calc(100dvh - 4rem);
 
@@ -54,21 +54,21 @@
 
 .javier {
   margin-left: 9rem;
-  animation: javier 2s ease-in-out;
+  animation: javier 3s ease-in-out;
 }
 .lopez {
   margin-left: 10rem;
-  animation: lopez 2s ease-in-out;
+  animation: lopez 3s ease-in-out;
 }
 .cantero {
   margin-left: 9rem;
-  animation: cantero 2s ease-in-out;
+  animation: cantero 3s ease-in-out;
 }
 
 .name text {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  animation: opacity 2s ease-in-out;
+  animation: opacity 3s ease-in-out;
 }
 .name:hover text {
   opacity: 0.3;
@@ -80,12 +80,27 @@
   margin: 0;
 }
 
+@media (max-width: 800px) {
+  .javier,
+  .lopez,
+  .cantero {
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+  }
+  .name text {
+    animation: opacity 4s infinite ease-in-out;
+  }
+}
+
 @keyframes javier {
   from {
     margin-left: 9rem;
   }
-  70% {
+  30% {
     margin-left: 0;
+  }
+  70% {
+    margin-left: 9rem;
   }
 
   to {
@@ -96,8 +111,11 @@
   from {
     margin-left: 10rem;
   }
-  70% {
+  30% {
     margin-left: 0;
+  }
+  70% {
+    margin-left: 10rem;
   }
 
   to {
@@ -108,8 +126,11 @@
   from {
     margin-left: 9rem;
   }
-  70% {
+  30% {
     margin-left: 0;
+  }
+  70% {
+    margin-left: 9rem;
   }
 
   to {
@@ -120,8 +141,11 @@
   from {
     opacity: 0;
   }
-  70% {
+  30% {
     opacity: 0.3;
+  }
+  70% {
+    opacity: 0;
   }
 
   to {
@@ -129,22 +153,14 @@
   }
 }
 
-@keyframes blockhover {
-  from {
-    display: block;
-  }
-  to {
-    display: none;
-  }
-}
-
 @keyframes blip {
   from {
     margin-bottom: 0rem;
   }
-  70% {
+  30% {
     margin-bottom: 0rem;
   }
+
   50% {
     margin-bottom: 0.3rem;
   }

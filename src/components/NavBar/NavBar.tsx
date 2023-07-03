@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import styles from "./NavBar.module.css";
 import { useObserver } from "@/hooks";
 
