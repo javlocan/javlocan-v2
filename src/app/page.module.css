@@ -3,6 +3,33 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 6rem;
   min-height: 50vh;
+}
+
+.profilePic {
+  position: absolute;
+  border-radius: 200rem;
+  width: 45rem;
+  height: 30rem;
+  aspect-ratio: 16/9 !important;
+}
+
+.top {
+  display: block;
+  position: relative;
+  visibility: hidden;
+
+  top: -100vh;
+}
+
+.chivato {
+  position: absolute;
+  top: 60vh;
+  left: 50%;
+}
+
+.bye > * {
+  opacity: 0;
 }

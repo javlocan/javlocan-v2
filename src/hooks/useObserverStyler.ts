@@ -10,7 +10,7 @@ interface Props {
   rootMargin?: number;
   inverse?: boolean;
 }
-export const useObserver = (props: Props) => {
+export const useObserverStyler = (props: Props) => {
   const {
     chivatoId,
     targetId,
@@ -68,7 +68,7 @@ export const useObserver = (props: Props) => {
         threshold,
       }
     );
-    console.log(secondChivato);
+    console.log(chivato, secondChivato);
     if (secondChivato != null) observer.observe(secondChivato);
     observer.observe(chivato);
   });

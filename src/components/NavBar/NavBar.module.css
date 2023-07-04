@@ -1,188 +1,32 @@
-.container {
-  display: flex;
-
-  flex-direction: column;
-  justify-content: center;
-  place-items: center;
-  cursor: default;
-  width: 100%;
-  padding-bottom: 8rem;
-  height: calc(100vh - 3rem);
-  height: calc(100dvh - 4rem);
-
-  transition: opacity 0.3s ease-in-out;
-  color: white;
-  background: var(--color-primary-dark);
-}
-
-.header {
+.nav {
   position: sticky;
   top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background: var(--color-primary-dark);
+
   width: 100vw;
   height: 4rem;
-  transition: opacity 0.3s ease-in-out;
-}
-.title {
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+  color: white;
+  background: var(--color-primary-dark);
+
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+}
+.nav ul {
+  list-style-type: none;
+
+  display: flex;
+  justify-content: flex-end;
   gap: 3rem;
+}
+.nav > * {
   transition: opacity 0.3s ease-in-out;
 }
-.byeContainer {
+.bye > * {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
-}
-.byeHeader > * {
-  opacity: 0;
-}
-.scroll {
-  width: 2rem;
-  transition: margin-bottom 0.2s ease-in-out;
-  animation: blip 2s ease-in-out infinite;
-}
-.scroll:hover {
-  transition: margin-bottom 0.2s ease-in-out;
-  animation: blip2 0.4s ease-in-out infinite;
-}
-
-.javier {
-  margin-left: 9rem;
-  animation: javier 3s ease-in-out;
-}
-.lopez {
-  margin-left: 10rem;
-  animation: lopez 3s ease-in-out;
-}
-.cantero {
-  margin-left: 9rem;
-  animation: cantero 3s ease-in-out;
-}
-
-.name text {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  animation: opacity 3s ease-in-out;
-}
-.name:hover text {
-  opacity: 0.3;
-}
-.name h1 {
-  transition: margin 0.3s ease-in-out;
-}
-.name:hover h1 {
-  margin: 0;
-}
-
-@media (max-width: 800px) {
-  .javier,
-  .lopez,
-  .cantero {
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
-  }
-  .name text {
-    animation: opacity 4s infinite ease-in-out;
-  }
-}
-
-@keyframes javier {
-  from {
-    margin-left: 9rem;
-  }
-  30% {
-    margin-left: 0;
-  }
-  70% {
-    margin-left: 9rem;
-  }
-
-  to {
-    margin-left: 9rem;
-  }
-}
-@keyframes lopez {
-  from {
-    margin-left: 10rem;
-  }
-  30% {
-    margin-left: 0;
-  }
-  70% {
-    margin-left: 10rem;
-  }
-
-  to {
-    margin-left: 10rem;
-  }
-}
-@keyframes cantero {
-  from {
-    margin-left: 9rem;
-  }
-  30% {
-    margin-left: 0;
-  }
-  70% {
-    margin-left: 9rem;
-  }
-
-  to {
-    margin-left: 9rem;
-  }
-}
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0.3;
-  }
-  70% {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes blip {
-  from {
-    margin-bottom: 0rem;
-  }
-  30% {
-    margin-bottom: 0rem;
-  }
-
-  50% {
-    margin-bottom: 0.3rem;
-  }
-  30% {
-    margin-bottom: 0rem;
-  }
-
-  to {
-    margin-bottom: 0rem;
-  }
-}
-
-@keyframes blip2 {
-  from {
-    margin-bottom: 0rem;
-  }
-
-  50% {
-    margin-bottom: 0.3rem;
-  }
-
-  to {
-    margin-bottom: 0rem;
-  }
 }
