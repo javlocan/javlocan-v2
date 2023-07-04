@@ -31,6 +31,7 @@
   opacity: 0;
 }
 .scroll {
+  user-select: none;
   width: 2rem;
   height: 2rem;
   transition: margin-bottom 0.2s ease-in-out;

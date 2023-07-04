@@ -1,12 +1,13 @@
 :root {
   font-size: 12pt;
-  --max-width: 1100px;
+  font-family: Arial, sans serif;
+  --max-width: 1200px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-mono: "Recursive", Courier, monospace;
 
+  --color-primary-light: rgb(205, 78, 165);
   --color-primary-dark: rgb(38, 20, 47);
+  --color-primary-dark-trans: rgba(38, 20, 47, 0.95);
   --clr-primary-400: rgb(81, 116, 182);
   --clr-primary-500: rgb(90, 50, 198);
   --clr-primary-600: hsla(262, 61%, 41%, 1);
@@ -19,20 +20,13 @@
   padding: 0;
   margin: 0;
 }
-html {
-  background: var(--color-primary-dark);
-  overflow-x: hidden;
-}
+
 html,
 body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 
   max-width: 100vw;
-  overflow-x: hidden;
-}
-
-header {
-  overflow: auto;
 }
 
 footer {
@@ -42,7 +36,7 @@ footer {
 body {
   max-height: 100vh;
   max-height: 100dvh;
-  background: antiquewhite;
+  background: var(--color-primary-dark);
   position: relative;
 }
 
@@ -51,17 +45,34 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-recursive);
+}
 h1 {
-  font-family: var(--font-mono);
   font-size: 4rem;
   line-height: 0.9em;
   text-transform: uppercase;
 }
+h2 {
+  font-variation-settings: "wght" 600, "MONO" 0, "CASL" 0.3, "slnt" 0, "CRSV" 1;
+  font-size: 2.6rem;
+  line-height: 1em;
+  color: var(--color-primary-light);
+}
 
 h3 {
-  font-family: var(--font-mono);
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 0.9em;
   text-transform: uppercase;
+}
+
+h4 {
+  font-variation-settings: "wght" 500, "MONO" 0, "CASL" 0, "slnt" 0, "CRSV" 0;
+  font-size: 1.4rem;
 }

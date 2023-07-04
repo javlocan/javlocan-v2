@@ -11,22 +11,28 @@
   padding: 2rem;
 
   color: white;
-  background: var(--color-primary-dark);
+  background: var(--color-primary-dark-trans);
 
   transition: opacity 0.3s ease-in-out;
   z-index: 9999;
 }
-.nav ul {
-  list-style-type: none;
-
-  display: flex;
-  justify-content: flex-end;
-  gap: 3rem;
-}
 .nav > * {
   transition: opacity 0.3s ease-in-out;
+}
+.nav ul {
+  display: none;
 }
 .bye > * {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .nav ul {
+    list-style-type: none;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
 }
