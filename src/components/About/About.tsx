@@ -6,9 +6,7 @@ export const About = () => {
       <div className={styles.grid}>
         <img src="/perfil.jpeg" alt="Javier" className={styles.photo} />
         <h2 className={styles.hi}>
-          <b>Hi! 👋🏼</b>
-          <br />
-          This is me, javi
+          <b>Hi! </b> This is me, javi
         </h2>
         <h4>
           After a wild career in social work, I&apos;m now back to my

@@ -11,7 +11,7 @@
   padding: 2rem;
 
   color: white;
-  background: var(--color-primary-dark-trans);
+  background: var(--color-primary-dark);
 
   transition: opacity 0.3s ease-in-out;
   z-index: 9999;
@@ -25,6 +25,9 @@
 .bye > * {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
+}
+.nav:focus {
+  height: 100dvh;
 }
 
 @media (min-width: 768px) {

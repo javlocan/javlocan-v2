@@ -1,53 +1,45 @@
 .container {
   width: 100vw;
-  padding: 3rem 3rem;
-  background-color: rgba(255, 220, 220, 1);
-  color: black;
+  padding: 6rem 3rem;
+  background-color: rgb(52, 37, 58);
+  color: white;
 }
 
+.container p {
+  opacity: 0.8;
+}
 .grid {
   max-width: var(--max-width);
   margin: 0 auto;
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
   position: relative;
 }
-.grid h4 b {
-  font-variation-settings: "wght" 800, "MONO" 1, "CASL" 0, "slnt" -17, "CRSV" 0;
-}
+
 .hi {
   position: relative;
-  margin-bottom: 1rem;
 }
-
 .hi b {
-  font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" -8, "CRSV" 1;
-  font-size: 3rem;
-}
-.hi::after {
-  content: "";
-  border: 1px solid var(--color-primary-light);
-  position: absolute;
-  bottom: -1rem;
-
-  left: 0;
-  width: 85%;
+  animation: whatev 3s infinite;
+  font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" 0, "CRSV" 1;
+  font-size: 4rem;
 }
 
 .photo {
   width: 100%;
   object-fit: cover;
   object-position: 80%;
-
   aspect-ratio: 1;
   border-radius: 100%;
-
-  grid-row: 3;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
+  grid-row: 2;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .grid {
     grid-template-columns: repeat(5, 1fr);
+
     padding-block: 3rem;
   }
   .grid :nth-child(1) {
@@ -55,7 +47,7 @@
     height: 100%;
     object-position: 70%;
     border-radius: 2rem;
-
+    margin: 0;
     grid-column: 4/6;
     grid-row: 1/4;
   }
@@ -71,8 +63,34 @@
     grid-column: 1/4;
     grid-row: 3/4;
   }
-
+  .hi {
+    line-height: 1.5em;
+  }
   .hi::after {
-    width: 24rem;
+    width: 85%;
+  }
+}
+
+@keyframes whatev {
+  from {
+    font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" 0, "CRSV" 1;
+  }
+  5% {
+    font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" -15,
+      "CRSV" 1;
+  }
+  10% {
+    font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" 0, "CRSV" 1;
+  }
+  15% {
+    font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" -15,
+      "CRSV" 1;
+  }
+  20% {
+    font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" 0, "CRSV" 1;
+  }
+
+  to {
+    font-variation-settings: "wght" 900, "MONO" 0, "CASL" 0, "slnt" 0, "CRSV" 1;
   }
 }
